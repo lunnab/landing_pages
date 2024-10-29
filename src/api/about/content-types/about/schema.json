@@ -13,11 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 255,
+      "minLength": 5
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
